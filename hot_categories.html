@@ -1,0 +1,60 @@
+import {Component} from '@angular/core';
+
+@Component({
+	selector: 'app-products',
+	templateUrl: './product-list.component.html'
+})
+
+export class ProductListComponent{
+	pageTitle: string = "Product List";
+	imageWidth: number = 50;
+	imageMargin: number = 2;
+	showImage: boolean = false;
+	listFilter: string = 'carts';
+	products: any[]=[
+		{
+			'id': 1,
+			'name': 'Pineapple',
+			'code': 'Pi',
+			'releaseDate': 'March 18, 2019',
+			'description': '15 gallon capacity rkrden',
+			'price': 32.99,
+			'starRating': 4.2,
+			'imageUrl': 'assets/images/smile.png',
+		},
+		{
+			'id': 2,
+			'name': 'Apple',
+			'code': 'AP',
+			'releaseDate': 'April 18, 2019',
+			'description': '15 gallon capacity rolling garden',
+			'price': 32.99,
+			'starRating': 4.2,
+			'imageUrl': 'assets/images/smile.png',
+		},
+		{
+			'id': 3,
+			'name': 'Pawpaw',
+			'code': 'Pi',
+			'releaseDate': 'May 29, 2018',
+			'description': '15 gallon capacity rolling garden',
+			'price': 52.99,
+			'starRating': 2.2,
+			'imageUrl': 'assets/images/habitudes.png',
+		},
+		{
+			'id': 4,
+			'name': 'Orange',
+			'code': 'Pi',
+			'releaseDate': 'December 01, 2019',
+			'description': 'capacity rkrden',
+			'price': 46.25,
+			'starRating': 1.9,
+			'imageUrl': 'assets/images/habitudes.png',
+		}
+	];
+
+	toggleImage(): void {
+		this.showImage = !this.showImage;
+	}
+}
